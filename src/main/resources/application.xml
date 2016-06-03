@@ -7,5 +7,9 @@
 
 	<context:component-scan base-package="io.github.kuyer.lock.service" />
 	<context:property-placeholder file-encoding="UTF-8" location="classpath:config.properties" />
+	
+	<bean id="jedis" class="io.github.kuyer.redis.RedisFactoryBean">
+		<property name="host" value="${redis.host}" />
+	</bean>
 
 </beans>
